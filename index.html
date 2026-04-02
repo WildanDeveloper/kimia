@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larutan Penyangga dalam Kehidupan dan Al-Qur'an</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold:        #8B6914;
+    --gold-mid:    #B8890A;
+    --gold-light:  #C8A030;
+    --gold-pale:   #D9BF7A;
+    --cream:       #F8F0D8;
+    --cream-dark:  #EDD9A3;
+    --parchment:   #F2E8C8;
+    --brown:       #5C3D11;
+    --brown-dark:  #3B2507;
+    --shadow:      rgba(60,35,5,0.20);
+    --green:       #3A6B35;
+    --teal:        #1E6B6B;
+    --red:         #8B2020;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: #D9CCAA;
+    background-image:
+      radial-gradient(ellipse at 20% 0%, #C8B888 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 100%, #C0AE78 0%, transparent 55%);
+    font-family: 'Source Serif 4', Georgia, serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px 16px 50px;
+    min-height: 100vh;
+  }
+
+  .page {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(150deg, #7A5510 0%, #4A2D06 55%, #6A4510 100%);
+    border-radius: 18px;
+    padding: 24px 26px 20px;
+    text-align: center;
+    border: 3px solid var(--gold-light);
+    box-shadow: 0 6px 24px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg, transparent 0px, transparent 12px,
+      rgba(255,255,255,0.025) 12px, rgba(255,255,255,0.025) 13px
+    );
+  }
+  .header-ornament {
+    font-size: 18px;
+    color: var(--gold-pale);
+    letter-spacing: 8px;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--cream);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.35;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  .header h1 em {
+    font-style: normal;
+    color: var(--gold-pale);
+  }
+  .header-sub {
+    margin-top: 8px;
+    font-size: 11.5px;
+    color: rgba(240,220,160,0.75);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  /* ── CARD BASE ── */
+  .card {
+    background: var(--parchment);
+    border-radius: 15px;
+    border: 2.5px solid var(--gold-pale);
+    box-shadow: 0 3px 14px var(--shadow);
+    overflow: hidden;
+    position: relative;
+  }
+  .card::after {
+    content: '◆ ◆';
+    position: absolute;
+    bottom: 9px;
+    right: 14px;
+    color: var(--gold-pale);
+    font-size: 8px;
+    letter-spacing: 5px;
+  }
+
+  .card-title-bar {
+    background: linear-gradient(95deg, #9A7018 0%, #6A4A0A 100%);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1.5px solid var(--gold-light);
+  }
+  .card-title-bar .icon {
+    font-size: 12px;
+    color: var(--gold-pale);
+    font-weight: 700;
+  }
+  .card-title-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.4px;
+  }
+
+  .card-inner {
+    padding: 14px 18px 26px;
+  }
+
+  p, li {
+    font-size: 13.5px;
+    color: var(--brown-dark);
+    line-height: 1.68;
+  }
+
+  /* ── CARD 1: Apa itu ── */
+  .def-grid {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .def-text { flex: 1; }
+  .def-text ul { list-style: none; margin-top: 4px; }
+  .def-text ul li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .def-text ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 11px;
+    top: 3px;
+  }
+  .ph-badge {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1E5E6E, #0D3545);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2A8AA0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin-top: 4px;
+  }
+  .ph-badge .ph-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #7EDDEE;
+    line-height: 1;
+  }
+  .ph-badge .ph-label {
+    font-size: 9px;
+    color: #A0D8E8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .ph-scale {
+    margin-top: 10px;
+    display: flex;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 10px;
+    border: 1px solid var(--gold-pale);
+  }
+  .ph-scale span {
+    flex: 1;
+    display: block;
+  }
+
+  /* ── CARD 2: Cara Kerja ── */
+  .mechanism {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .mech-box {
+    flex: 1;
+    border-radius: 9px;
+    padding: 10px 12px;
+    border: 1.5px solid;
+  }
+  .mech-box.acid {
+    background: rgba(139,32,32,0.07);
+    border-color: rgba(139,32,32,0.25);
+  }
+  .mech-box.base {
+    background: rgba(30,107,107,0.07);
+    border-color: rgba(30,107,107,0.25);
+  }
+  .mech-box .tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .mech-box.acid .tag { color: var(--red); }
+  .mech-box.base .tag { color: var(--teal); }
+  .mech-box p { font-size: 12.5px; }
+  .mech-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--gold);
+    padding: 0 2px;
+  }
+
+  /* ── CARD 3: Tubuh Manusia ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .body-item {
+    background: rgba(139,105,20,0.08);
+    border: 1.5px solid var(--gold-pale);
+    border-radius: 9px;
+    padding: 9px 11px;
+  }
+  .body-item .bi-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .body-item p { font-size: 12px; }
+
+  /* ── CARD 4: Sehari-hari ── */
+  .daily-list { list-style: none; margin-top: 4px; }
+  .daily-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(180,148,60,0.2);
+  }
+  .daily-list li:last-child { border-bottom: none; }
+  .daily-num {
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gold-mid);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+  .daily-list li div strong {
+    font-size: 13px;
+    color: var(--brown);
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  /* ── CARD 5: Industri ── */
+  .industry-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .ind-chip {
+    background: linear-gradient(135deg, rgba(139,105,20,0.12), rgba(139,105,20,0.05));
+    border: 1.5px solid var(--gold-pale);
+    border-radius: 8px;
+    padding: 7px 11px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+    min-width: 130px;
+  }
+  .ind-chip .ic-icon { font-size: 10px; font-weight: 700; color: var(--gold); min-width: 28px; text-align: center; background: rgba(139,105,20,0.15); border-radius: 5px; padding: 3px 4px; }
+  .ind-chip .ic-text strong { font-size: 12.5px; color: var(--brown); display: block; }
+  .ind-chip .ic-text span { font-size: 11.5px; color: var(--brown-dark); }
+
+  /* ── CARD 6: Al-Qur'an ── */
+  .quran-card {
+    background: linear-gradient(160deg, #2A4A2A 0%, #1A3020 100%);
+    border-color: #5A8A5A;
+  }
+  .quran-card .card-title-bar {
+    background: linear-gradient(95deg, #2E6030 0%, #1A3A1A 100%);
+    border-bottom-color: #5A8A5A;
+  }
+  .quran-card .card-inner {
+    background: transparent;
+  }
+  .quran-card::after { color: rgba(140,200,100,0.4); }
+
+  .arabic-verse {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    color: #D4F0B0;
+    text-align: right;
+    direction: rtl;
+    line-height: 2;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px;
+    border: 1px solid rgba(140,200,100,0.2);
+    margin-bottom: 10px;
+  }
+  .verse-ref {
+    font-size: 11px;
+    color: #8CC870;
+    font-style: italic;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .verse-translation {
+    font-size: 13px;
+    color: #C8E8A8;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-left: 3px solid #5A8A5A;
+  }
+  .hikmah-box {
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    border: 1px solid rgba(140,200,100,0.2);
+    padding: 11px 14px;
+  }
+  .hikmah-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: #8CC870;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hikmah-box p {
+    font-size: 12.5px;
+    color: #B8DCA0;
+    line-height: 1.7;
+  }
+
+  .mizan-connect {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .mc-box {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(140,200,100,0.15);
+    padding: 9px 11px;
+    text-align: center;
+  }
+  .mc-icon { font-size: 10px; font-weight: 700; color: #8CC870; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 4px; }
+  .mc-label { font-size: 11px; color: #8CC870; font-weight: 600; margin-bottom: 3px; }
+  .mc-desc { font-size: 11px; color: #A8C898; line-height: 1.5; }
+  .mc-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #5A8A5A;
+    padding: 0 2px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: linear-gradient(150deg, #4A2D06, #2E1A04);
+    border-radius: 14px;
+    border: 2px solid var(--gold-light);
+    box-shadow: 0 4px 16px var(--shadow);
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer-scale {
+    width: 80px;
+    min-width: 80px;
+  }
+  .footer-scale .fs-label {
+    font-size: 9px;
+    color: var(--gold-pale);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .fs-bar {
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .fs-bar span { display: block; height: 100%; }
+  .fs-tick {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+  }
+  .fs-tick span { font-size: 8px; color: var(--gold-pale); }
+  .fs-marker {
+    width: 2px;
+    height: 6px;
+    background: white;
+    border-radius: 1px;
+    margin: 2px auto 0;
+    opacity: 0.8;
+  }
+  .footer-info { flex: 1; }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+  .footer-absen {
+    font-size: 12px;
+    color: var(--gold-pale);
+    letter-spacing: 0.5px;
+  }
+  .footer-subject {
+    font-size: 10.5px;
+    color: rgba(210,185,120,0.6);
+    margin-top: 2px;
+    font-style: italic;
+  }
+  .footer-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-mid), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-ornament">— ✦ —</div>
+    <h1>Larutan Penyangga<br><em>dalam Kehidupan &amp; Al-Qur'an</em></h1>
+    <div class="header-sub">Kimia · Kelas XII ALAM 2 · Integrasi Sains &amp; Islam</div>
+  </div>
+
+  <!-- CARD 1: Definisi -->
+  <div class="card">
+    <div class="card-title-bar">
+      <span class="icon">[ I ]</span>
+      <h2>Apa itu Larutan Penyangga?</h2>
+    </div>
+    <div class="card-inner">
+      <div class="def-grid">
+        <div class="def-text">
+          <ul>
+            <li>Larutan yang <strong>mempertahankan pH</strong> meski ditambah asam, basa, atau diencerkan.</li>
+            <li>Terdiri dari <strong>asam/basa lemah</strong> dan <strong>garam basa/asam konjugasinya</strong>.</li>
+            <li>Mengandung komponen asam <em>dan</em> basa sekaligus — sehingga mampu menetralisir gangguan.</li>
+            <li>Disebut juga <strong>larutan buffer</strong> atau <strong>larutan dapar</strong>.</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="ph-scale" style="margin-top:12px;">
+        <span style="background:#D32F2F; flex:1;"></span>
+        <span style="background:#E64A19; flex:1;"></span>
+        <span style="background:#F57C00; flex:1;"></span>
+        <span style="background:#F9A825; flex:1;"></span>
+        <span style="background:#AFB42B; flex:1;"></span>
+        <span style="background:#7CB342; flex:1;"></span>
+        <span style="background:#2E7D32; flex:1;"></span>
+        <span style="background:#00838F; flex:1;"></span>
+        <span style="background:#0277BD; flex:1;"></span>
+        <span style="background:#1565C0; flex:1;"></span>
+        <span style="background:#283593; flex:1;"></span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:3px;padding:0 2px;">
+        <span style="font-size:9px;color:var(--brown);">0 — Asam</span>
+        <span style="font-size:9px;color:var(--green);font-weight:600;">Buffer ≈ tetap stabil</span>
+        <span style="font-size:9px;color:var(--brown);">14 — Basa</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 2: Cara Kerja -->
+  <div class="card">
+    <div class="card-title-bar">
+      <span class="icon">[ II ]</span>
+      <h2>Cara Kerja Buffer</h2>
+    </div>
+    <div class="card-inner">
+      <div class="mechanism">
+        <div class="mech-box acid">
+          <div class="tag">+ Asam (H⁺)</div>
+          <p>Komponen <strong>basa konjugasi</strong> bereaksi mengikat H⁺, mencegah pH turun drastis.</p>
+          <p style="margin-top:6px;font-size:12px;color:var(--red);">CH₃COO⁻ + H⁺ → CH₃COOH</p>
+        </div>
+        <div class="mech-arrow">⇄</div>
+        <div class="mech-box base">
+          <div class="tag">+ Basa (OH⁻)</div>
+          <p>Komponen <strong>asam lemah</strong> bereaksi mengikat OH⁻, mencegah pH naik drastis.</p>
+          <p style="margin-top:6px;font-size:12px;color:var(--teal);">CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O</p>
+        </div>
+      </div>
+      <p style="margin-top:10px;font-size:12.5px;color:var(--brown);text-align:center;font-style:italic;">
+        "Seperti penengah sejati — menerima serangan dari dua sisi tanpa kehilangan keseimbangan."
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 3: Tubuh Manusia -->
+  <div class="card">
+    <div class="card-title-bar">
+      <span class="icon">[ III ]</span>
+      <h2>Buffer dalam Tubuh Manusia</h2>
+    </div>
+    <div class="card-inner">
+      <div class="body-grid">
+        <div class="body-item">
+          <div class="bi-label">Darah</div>
+          <p>Buffer bikarbonat <strong>H₂CO₃/HCO₃⁻</strong> mempertahankan pH darah 7,35–7,45. Penyimpangan fatal!</p>
+        </div>
+        <div class="body-item">
+          <div class="bi-label">Sel</div>
+          <p>Buffer fosfat <strong>H₂PO₄⁻/HPO₄²⁻</strong> menjaga pH cairan intrasel tetap sekitar 7,2.</p>
+        </div>
+        <div class="body-item">
+          <div class="bi-label">Air Ludah</div>
+          <p>Buffer fosfat & bikarbonat menjaga pH mulut ~6,8 agar enzim amilase bekerja optimal.</p>
+        </div>
+        <div class="body-item">
+          <div class="bi-label">Protein</div>
+          <p>Protein darah (hemoglobin) juga bertindak sebagai buffer dengan melepas/mengikat H⁺.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 4: Sehari-hari -->
+  <div class="card">
+    <div class="card-title-bar">
+      <span class="icon">[ IV ]</span>
+      <h2>Contoh dalam Kehidupan Sehari-hari</h2>
+    </div>
+    <div class="card-inner">
+      <ul class="daily-list">
+        <li>
+          <div class="daily-num">1</div>
+          <div><strong>Obat Antasida &amp; Obat Tetes Mata</strong>
+          Menjaga pH lambung &amp; mata agar obat efektif dan tidak merusak jaringan.</div>
+        </li>
+        <li>
+          <div class="daily-num">2</div>
+          <div><strong>Sampo &amp; Produk Rambut</strong>
+          Menggunakan buffer untuk mempertahankan pH 4,6–6,0, sesuai pH rambut manusia.</div>
+        </li>
+        <li>
+          <div class="daily-num">3</div>
+          <div><strong>Pengalengan Makanan &amp; Minuman</strong>
+          Asam sitrat + natrium sitrat menjaga pH agar bakteri tidak berkembang.</div>
+        </li>
+        <li>
+          <div class="daily-num">4</div>
+          <div><strong>Pengolahan Limbah Industri</strong>
+          pH limbah diatur stabil di kisaran 5–7,5 agar aman saat dibuang ke lingkungan.</div>
+        </li>
+        <li>
+          <div class="daily-num">5</div>
+          <div><strong>Lensa Kontak</strong>
+          Larutan penyangga borat menjaga pH larutan pembersih sesuai pH mata manusia.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CARD 5: Industri -->
+  <div class="card">
+    <div class="card-title-bar">
+      <span class="icon">[ V ]</span>
+      <h2>Peran dalam Dunia Industri &amp; Riset</h2>
+    </div>
+    <div class="card-inner">
+      <div class="industry-row">
+        <div class="ind-chip">
+          <span class="ic-icon">Rx</span>
+          <div class="ic-text">
+            <strong>Farmasi</strong>
+            <span>Obat suntik &amp; infus memerlukan pH yang tepat dan stabil</span>
+          </div>
+        </div>
+        <div class="ind-chip">
+          <span class="ic-icon">pH</span>
+          <div class="ic-text">
+            <strong>Pertanian</strong>
+            <span>Buffer tanah melindungi tanaman dari perubahan pH akibat pupuk</span>
+          </div>
+        </div>
+        <div class="ind-chip">
+          <span class="ic-icon">Bio</span>
+          <div class="ic-text">
+            <strong>Biokimia</strong>
+            <span>Elektroforesis &amp; reaksi enzimatis butuh pH terkontrol presisi</span>
+          </div>
+        </div>
+        <div class="ind-chip">
+          <span class="ic-icon">Foto</span>
+          <div class="ic-text">
+            <strong>Fotografi</strong>
+            <span>Buffer dipakai dalam proses cuci cetak film &amp; digital printing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 6: Al-Qur'an -->
+  <div class="card quran-card">
+    <div class="card-title-bar">
+      <span class="icon">[ VI ]</span>
+      <h2 style="color:#D4F0B0;">Perspektif Al-Qur'an: Konsep Mīzān</h2>
+    </div>
+    <div class="card-inner">
+
+      <div class="arabic-verse">
+        وَالسَّمَاءَ رَفَعَهَا وَوَضَعَ الْمِيزَانَ ﴿٧﴾ أَلَّا تَطْغَوْا فِي الْمِيزَانِ ﴿٨﴾ وَأَقِيمُوا الْوَزْنَ بِالْقِسْطِ وَلَا تُخْسِرُوا الْمِيزَانَ ﴿٩﴾
+      </div>
+      <div class="verse-ref">QS. Ar-Rahman [55]: 7–9</div>
+      <div class="verse-translation">
+        "Dan langit telah ditinggikan-Nya dan Dia meletakkan neraca (keseimbangan). (7) Agar kamu jangan melampaui batas dalam neraca itu. (8) Dan tegakkanlah timbangan itu dengan adil dan janganlah kamu mengurangi neraca itu." (9)
+      </div>
+
+      <div class="hikmah-box">
+        <div class="hikmah-title">&#9670; Hikmah: Mīzān &amp; Larutan Penyangga</div>
+        <p>
+          Allah menciptakan seluruh alam dengan prinsip <em>mīzān</em> — keseimbangan yang presisi. Larutan penyangga dalam tubuh kita adalah bukti nyata: Allah merancang sistem buffer biologis yang luar biasa canggih, menjaga pH darah dalam rentang sempit 7,35–7,45. Penyimpangan sekecil 0,1 pun bisa berakibat fatal. Ini adalah tanda kebesaran Allah (<em>āyāt kawniyy
